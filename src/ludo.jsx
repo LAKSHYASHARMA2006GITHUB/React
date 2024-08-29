@@ -2,10 +2,19 @@ import { useState } from "react"
 export default function Ludo(){
 
     let [moves,setmoves] = useState({blue:0,red:0,green:0,yellow:0}) //use state in useState
+    let [arrmoves,setarrmoves] = useState(["no moves"]);
+
+      
+
      let Blue=()=>{
-       setmoves((prevMoves)=>{     // callback function
-        return({...prevMoves,blue:prevMoves.blue+1})
-       });
+    //    setmoves((prevMoves)=>{     // callback function
+    //     return({...prevMoves,blue:prevMoves.blue+1})
+    //    });
+
+         arrmoves.push("blue moves");
+         setarrmoves((prevArr)=>{
+         return[...prevArr,"blue moves"];
+         });
     }
 
     let Red = () => {
@@ -25,6 +34,7 @@ export default function Ludo(){
     return(
         <div>
         <p>Game begains:</p>
+        <p>{arrmoves}</p>
         <div>
         <h2>Blue moves:{moves.blue}</h2>
         <button onClick={Blue} style={{backgroundColor:"blue"}}>Blue</button>

@@ -5,6 +5,7 @@ import './App.css'
 import Count from './counter'
 import Like from './LikeBtn'
 import Ludo from './ludo'
+import TodoList from './Todo'
 
 function App() {
  
@@ -13,7 +14,8 @@ function App() {
     <>
       {/* <Count/> */}
       {/* <Like/> */}
-      <Ludo/>
+      {/* <Ludo/> */}
+      <TodoList/>
     </>
   )
 }
